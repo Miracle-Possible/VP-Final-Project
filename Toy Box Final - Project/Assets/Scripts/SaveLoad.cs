@@ -37,6 +37,8 @@ public class SaveLoad : MonoBehaviour
 
     public void LoadProject()
     {
+        nodes.Clear();
+
         //Read the file in path
         StreamReader reader = new StreamReader(path);
         fullText = reader.ReadToEnd();

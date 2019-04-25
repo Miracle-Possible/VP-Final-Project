@@ -22,6 +22,6 @@ public class LoadScene : MonoBehaviour
 
             throw;
         }
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Editor");
     }
 }

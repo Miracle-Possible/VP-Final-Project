@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class NodeParser : MonoBehaviour
 {
-    public NodeParser instance;
+    public static NodeParser instance;
 
     public SaveLoad projectSave;
     public List<Node> nodes;
@@ -40,6 +40,11 @@ public class NodeParser : MonoBehaviour
 
     private void Update()
     {
+        if(projectSave == null)
+        {
+            projectSave = SaveLoad.instance;
+        }
+
         try
         {
             player = GameObject.FindGameObjectWithTag("Player");

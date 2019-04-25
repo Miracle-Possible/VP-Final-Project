@@ -74,6 +74,12 @@ public class ConnectionLogic : MonoBehaviour
             {
             thisbut.transform.parent.transform.parent.transform.position = otherButton.transform.parent.transform.parent.transform.position + new Vector3(0, -otherButton.transform.parent.transform.parent.gameObject.GetComponent<RectTransform>().rect.height, 0);
             thisbut.transform.parent.transform.parent.SetParent(otherButton.transform.parent.transform.parent);
+            gameObject.GetComponent<NodeContainerGO>().myNode.inputId = otherButton.transform.parent.transform.parent.GetComponent<NodeContainerGO>().myNode.id;
+            otherButton.transform.parent.transform.parent.GetComponent<NodeContainerGO>().myNode.outputId = gameObject.GetComponent<NodeContainerGO>().myNode.id;
+
+
+
+
             }
 
             /*
